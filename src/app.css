@@ -1,0 +1,81 @@
+/* AOS (Animate On Scroll) styles */
+[data-aos][data-aos][data-aos-duration="400"],body[data-aos-duration="400"] [data-aos] {
+    transition-duration: .4s
+}
+
+[data-aos][data-aos][data-aos-easing=ease],body[data-aos-easing=ease] [data-aos] {
+    transition-timing-function: ease
+}
+
+[data-aos^=zoom][data-aos^=zoom] {
+    opacity: 0;
+    transition-property: opacity,transform
+}
+
+[data-aos^=zoom][data-aos^=zoom].aos-animate {
+    opacity: 1;
+    transform: translateZ(0) scale(1)
+}
+
+[data-aos=zoom-in] {
+    transform: scale(.6)
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("./fonts/roboto_semibold.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@tailwind base;
+/* @tailwind components; */
+@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  font-family: "roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: #1f2937;
+}
+.animated-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+  z-index: 0;
+  /* Conic gradient for visible movement */
+  background: conic-gradient(var(--tw-gradient-stops, #00bfff 10%, #fff 10%, #fff 60%, #00bfff 60%, #00bfff 100%));
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.pal-border {
+  /* Make the gradient only show in the border area */
+  border: 5px solid transparent;        
+  border-radius: 9999px;              
+  background:
+    conic-gradient(
+      #ff0000 0 90deg,
+      #000000 90deg 180deg,
+      #ffffff 180deg 270deg,
+      #008000 270deg 360deg
+    ) border-box;
+}

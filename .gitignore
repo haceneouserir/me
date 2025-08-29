@@ -1,0 +1,5 @@
+# Composer dependencies
+/node_modules
+/vendor
+/.env
+/fiveserver.config.js
