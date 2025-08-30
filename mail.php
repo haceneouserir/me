@@ -12,8 +12,10 @@ use Dotenv\Dotenv;
 //Load Composer's autoloader (created by composer, not included with PHPMailer)
 require './vendor/autoload.php';
 
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+if (file_exists(__DIR__ . '/.env')) {
+  $dotenv = Dotenv::createImmutable(__DIR__);
+  $dotenv->load();
+}
 
 $form_csrf_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
 $session_csrf_token = isset($_SESSION['csrf_token']) ? $_SESSION['csrf_token'] : '';
