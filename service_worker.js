@@ -83,6 +83,10 @@ self.addEventListener('activate', evt => {
 
 // Fetch event
 self.addEventListener('fetch', evt => {
+  const url = new URL(evt.request.url);
+  if (evt.request.method !== 'GET' || (url.protocol !== "http:" && url.protocol !== "https:")) {
+    return; // don't try to cache non-GET requests && non-HTTP(S) requests
+  }
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {
