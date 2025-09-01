@@ -29,7 +29,7 @@ if (empty($_SESSION['csrf_token'])) {
   <!-- App CSS -->
   <link rel="stylesheet" href="/dist/app.min.css">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <!-- Apple Touch Icons -->
   <link rel="apple-touch-icon" href="/assets/icons/icon_152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon_180x180.png">
