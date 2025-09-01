@@ -12,7 +12,7 @@ const staticAssets = [
   "/dist/app.min.js",
   "/dist/aos-JupvBk5m.js",
   "/dist/fonts/roboto_semibold.ttf",
-  "/assets/icons/favicon.ico",
+  "/favicon.ico",
   "/assets/icons/icon_144x144.png",
   "/assets/icons/icon_152x152.png",
   "/assets/icons/icon_180x180.png",
