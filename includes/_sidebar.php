@@ -88,7 +88,7 @@
             </a>
         </nav>
     </div>
-    <div class="mt-6 absolute bottom-5 left-0 right-0">
+    <div class="mt-12">
         <p class="text-sm text-gray-700 dark:text-gray-400 text-center">Designed & Coded With
             <span class="text-2xl text-red-600">&hearts;</span> By Hacene Ouserir.
         </p>
