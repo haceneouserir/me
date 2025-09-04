@@ -1,5 +1,5 @@
 <input type="checkbox" id="drawerToggle" class="lg:hidden relative sr-only peer">
-<label for="drawerToggle" class="drawer-toggle-icon lg:hidden z-10 fixed top-0 left-0 inline-block p-4 transition-all duration-500 bg-capri rounded-lg peer-checked:rotate-180 peer-checked:left-80 mt-4 ml-4 cursor-pointer">
+<label for="drawerToggle" class="drawer-toggle-icon lg:hidden z-10 fixed top-0 left-0 inline-block p-4 transition-all duration-500 bg-capri rounded-lg peer-checked:rotate-180 xs-max:peer-checked:left-68 peer-checked:left-80 mt-4 ml-4 cursor-pointer">
     <!-- <div class="w-6 h-1 mb-3 -rotate-45 bg-white rounded-lg"></div>
      <div class="w-6 h-1 rotate-45 bg-white rounded-lg"></div> -->
     <svg width="28px" height="28px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#1f2937">
@@ -8,7 +8,7 @@
         <path d="M3 19H21" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
 </label>
-<aside class="h-screen px-4 py-8 overflow-y-auto bg-white border-r dark:bg-gray-900 dark:border-gray-700 lg:block fixed lg:sticky top-0 left-0 z-20 transition-all duration-500 transform lg:-translate-x-0 -translate-x-full peer-checked:translate-x-0">
+<aside class="xs-max:w-68 h-screen px-4 py-8 overflow-y-auto bg-white border-r dark:bg-gray-900 dark:border-gray-700 lg:block fixed lg:sticky top-0 left-0 z-20 transition-all duration-500 transform lg:-translate-x-0 -translate-x-full peer-checked:translate-x-0">
     <div class="theme-toggle absolute top-4 right-4">
         <button id="btnDark" class="hidden focus:outline-hidden" aria-label="Light mode">
                 <svg class="stroke-gray-500 hover:stroke-gray-400 transition ease-in-out delay-75 duration-300" width="30px" height="30px" stroke-width="1" viewBox="0 0 24 24" fill="#6b7280" xmlns="http://www.w3.org/2000/svg"><path d="M3 11.5066C3 16.7497 7.25034 21 12.4934 21C16.2209 21 19.4466 18.8518 21 15.7259C12.4934 15.7259 8.27411 11.5066 8.27411 3C5.14821 4.55344 3 7.77915 3 11.5066Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
