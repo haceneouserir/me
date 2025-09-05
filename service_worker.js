@@ -17,6 +17,7 @@ const staticAssets = [
   "/assets/icons/icon_152x152.png",
   "/assets/icons/icon_180x180.png",
   "/assets/icons/icon_167x167.png",
+  "/assets/images/ho.png",
   "/assets/images/bio/web_development.webp",
   "/assets/images/bio/computer_maintenance.webp",
   "/assets/images/bio/digital_marketing.webp",
