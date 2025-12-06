@@ -23,7 +23,8 @@ $session_csrf_token = isset($_SESSION['csrf_token']) ? $_SESSION['csrf_token'] :
 if (!isset($form_csrf_token) || $form_csrf_token !== $session_csrf_token) {
   echo json_encode([
     'success' => false,
-    'message' => 'Something went wrong, please try again later!'
+    // 'message' => 'Something went wrong, please try again later!'
+    'message' => 'Form CSRF:' . $form_csrf_token . ' not matching session CSRF:' . $session_csrf_token
   ]);
   exit;
 } else {

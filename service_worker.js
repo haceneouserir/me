@@ -4,8 +4,6 @@ const dynamicCache = "dynamic-v1";
 
 // Assets to pre-cache
 const staticAssets = [
-  "/",
-  "/index.php",
   "/offline.php",
   "/manifest.json",
   "/dist/app.min.css",
@@ -85,6 +83,13 @@ self.addEventListener('activate', evt => {
 // Fetch event
 self.addEventListener('fetch', evt => {
   const url = new URL(evt.request.url);
+
+  // Always fetch fresh for PHP files (dynamic content)
+  if (url.pathname.endsWith(".php") || url.pathname === '/') {
+    evt.respondWith(fetch(evt.request).catch(() => caches.match('/offline.php'))); // Fallback to offline page if fetch fails
+    return;
+  }
+
   if (evt.request.method !== 'GET' || (url.protocol !== "http:" && url.protocol !== "https:")) {
     return; // don't try to cache non-GET requests && non-HTTP(S) requests
   }
@@ -99,7 +104,7 @@ self.addEventListener('fetch', evt => {
         })
       });
     }).catch(() => {
-      // Offline fallback
+      // Fallback to offline page for navigation requests
       if (evt.request.mode === "navigate" || evt.request.destination === "document") {
         return caches.match('/offline.php');
       }
