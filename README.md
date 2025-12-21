@@ -1,2 +1,2 @@
-# Hacene Ouserir's personal website
-This project contains all the files of Hacene Ouserir website.
+# Starter Portfolio
+This project helps beginner developers build their first portfolio app.
